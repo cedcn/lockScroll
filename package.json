@@ -1,11 +1,11 @@
 {
   "name": "lock-scroll",
   "version": "1.0.1",
-  "description": "滚动条滑到底部时锁定",
+  "description": "滚动条滑到顶部或底部时锁定",
   "main": "./dist/lock-scroll.js",
   "scripts": {
-    "start": "webpack",
-    "example": "webpack-dev-server",
+    "start": "babel src --out-dir dist && webpack-dev-server",
+    "example": "webpack -p",
     "babel": "babel src --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,8 +27,5 @@
     "babel-loader": "^6.2.3",
     "babel-preset-es2015": "^6.5.0",
     "webpack": "^1.12.14"
-  },
-  "dependencies": {
-    "jquery": "^2.2.1"
   }
 }

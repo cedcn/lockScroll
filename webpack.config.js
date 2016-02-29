@@ -1,15 +1,14 @@
 const path = require('path');
-const OUTPATH = path.join(__dirname, './dist')
+const OUTPATH = path.join(__dirname, './example')
 
 const config = {
   context: __dirname,
   entry: {
-    index: './src/lock-scroll.js',
     app: './example/app.js'
   },
   output: {
     path: OUTPATH,
-    filename: '[name].js',
+    filename: '[name].min.js',
     publicPath: "/assets/"
   },
   module: {
@@ -23,12 +22,14 @@ const config = {
   resolve: {
     extensions: ['', '.js'],
   },
+  externals: {
+    'jquery': 'jQuery',
+  },
   devServer: {
     process: true,
     color: true,
-    hot: true
+    hot: true,
   }
 }
-
 
 module.exports = config;
