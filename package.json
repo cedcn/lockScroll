@@ -3,6 +3,10 @@
   "version": "1.0.1",
   "description": "滚动条滑到顶部或底部时锁定",
   "main": "./dist/lock-scroll.js",
+  "keywords": [
+    "lock scroll",
+    "锁定滚动条"
+  ],
   "scripts": {
     "start": "babel src --out-dir dist && webpack-dev-server",
     "example": "webpack -p",
